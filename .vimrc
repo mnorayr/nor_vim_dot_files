@@ -92,7 +92,7 @@ Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 
 " Generic Programming Support 
-
+"Bundle 'ivanov/vim-ipython'
 
 " Markdown / Writting
 Plugin 'tmhedberg/SimpylFold'

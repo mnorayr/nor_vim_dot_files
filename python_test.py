@@ -10,7 +10,10 @@
 
 # In[1]:
 
-import h2o
+str = "this is a string"
+
+print str
+
 print "this is a test"
 
 
@@ -26,7 +29,10 @@ print "this is a test"
 
 # In[2]:
 
-h2o.init(max_mem_size = 2)            #uses all cores by default
+#h2o.init(max_mem_size = 2)            #uses all cores by default
+
+import h2o
+h2o.h2o.init(ip='localhost', port=54321, strict_version_check=False)
 h2o.remove_all()                          #clean slate, in case cluster was already running
 
 
