@@ -9,12 +9,22 @@
 # Load the H2O Python module.
 
 # In[1]:
+##
 
-str = "this is a string"
+str1 = "this is a string"
+print str1
 
-print str
-
+str2 = "33333 Second string"
+print "\n ###################### \n"
+##
+print "\n ###################### \n"
 print "this is a test"
+print str2
+print "\n ###################### \n"
+
+##
+
+
 
 
 ############################################3

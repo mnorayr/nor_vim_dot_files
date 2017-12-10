@@ -1,5 +1,5 @@
 " vimrc file before reducing on 2017-Dec-08 13:26
-
+set noeb vb t_vb=
 """""""""""""""""""""""""""""""""""""""""
 "https://realpython.com/blog/python/vim-and-python-a-match-made-in-heaven/
 """"""""""""""""""""""""""
@@ -93,6 +93,7 @@ Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 " Generic Programming Support 
 "Bundle 'ivanov/vim-ipython'
+Plugin 'julienr/vim-cellmode'
 
 " Markdown / Writting
 Plugin 'tmhedberg/SimpylFold'
