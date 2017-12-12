@@ -290,8 +290,7 @@ train, valid, test = covtype_df.split_frame([0.6, 0.2], seed=1234)
 
 #Prepare predictors and response columns
 covtype_X = covtype_df.col_names[:-1]     #last column is cover_type, 
-covtype_y = covtype_df.col_names[-1]    
-
+covtype_y = covtype_df.col_names[-1]
 
 # ####First Impressions
 # Let's run our first Deep Learning model on the covtype dataset.   
@@ -342,7 +341,6 @@ covtype_model_v2 = H2ODeepLearningEstimator(
     stopping_tolerance=0.01)
 covtype_model_v2.train(covtype_X, covtype_y, training_frame=train, validation_frame=valid)
 
-
 # To look at the scoring history, we can look up our new model in Flow.  
 # 
 # Alternatively, we can use the score_history method to retrieve the data as a pandas DataFrame.
@@ -351,7 +349,6 @@ covtype_model_v2.train(covtype_X, covtype_y, training_frame=train, validation_fr
 
 cov_v2_df = covtype_model_v2.score_history()
 cov_v2_df
-
 
 # In[22]:
 
@@ -381,10 +378,10 @@ covtype_model_tuned = H2ODeepLearningEstimator(
   score_validation_samples=10000,  # downsample validation set for faster scoring
   score_duty_cycle=0.025,          # don't score more than 2.5% of the wall time
   adaptive_rate=False,             # manually tuned learning rate
-  rate=0.01, 
-  rate_annealing=0.000002,            
+  rate=0.01,
+  rate_annealing=0.000002,
   momentum_start=0.2,              # manually tuned momentum
-  momentum_stable=0.4, 
+  momentum_stable=0.4,
   momentum_ramp=10000000, 
   l1=0.00001,                      # add some L1/L2 regularization
   l2=0.00001,

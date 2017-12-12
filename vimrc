@@ -1,4 +1,4 @@
-" vimrc file before reducing on 2017-Dec-08 13:26
+" vimrc file before reducing on 2017-Dec-11 19:00
 set noeb vb t_vb=
 """""""""""""""""""""""""""""""""""""""""
 "https://realpython.com/blog/python/vim-and-python-a-match-made-in-heaven/
