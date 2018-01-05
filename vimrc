@@ -10,6 +10,10 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+
+" Autosave
+let g:auto_save = 1  " enable AutoSave on Vim startup
+
 " Enable folding
 set foldmethod=indent
 set foldlevel=99
@@ -41,6 +45,7 @@ EOF
 let g:ycm_autoclose_preview_window_after_completion=1
 map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
+
 "Syntax Checking/Highlighting
 "You can have VIM check your syntax on each save with the syntastic extension:
 
@@ -49,8 +54,24 @@ map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 let python_highlight_all=1
 
 "run visually selected code in python
-nnoremap <leader>[ :w !python<cr>
-xnoremap <leader>] :w !python<cr>
+"nnoremap <leader>[ :w !python<cr>
+"xnoremap <leader>] :w !python<cr>
+
+
+" vim-cellmode sending commands to ipython from vim
+" Setting the number of the pane to send commands to
+let g:cellmode_tmux_panenumber='1'
+"sends the currently selected lines to tmux
+"vmap <silent> <leader>] :call RunTmuxPythonChunk()<CR
+xnoremap <silent> <leader>] :call RunTmuxPythonChunk()<CR>
+
+"sends the current cell to tmux, moving to the next one
+noremap <silent> <leader>[ :call RunTmuxPythonCell(0)<CR>
+
+"sends the current cell to tmux
+noremap <silent> <leader>p :call RunTmuxPythonCell(1)<CR>
+
+
 
 set clipboard=unnamed
 
@@ -88,7 +109,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'kien/ctrlp.vim'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
-
+Plugin 'vim-scripts/vim-auto-save'
 
 
 " Generic Programming Support 

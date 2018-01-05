@@ -11,16 +11,22 @@
 # In[1]:
 ##
 
-str1 = "this is a string"
+str1 = "Hello world"
 print str1
 
-str2 = "33333 Second string"
-print "\n ###################### \n"
 ##
-print "\n ###################### \n"
-print "this is a test"
+
+str2 = "2222 Second string"
+print "\n %%%%%%%%%%%%%%%%%%%%  \n"
+print "Second Cell"
+
+###########
+
+print "\n  %%%%%%%%%%%%%%%%%%%%  \\n"
+
+print "Third Cell"
 print str2
-print "\n ###################### \n"
+print "\n %%%%%%%%%%%%%%%%%%%%  \n"
 
 ##
 
