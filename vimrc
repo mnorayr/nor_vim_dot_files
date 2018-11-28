@@ -48,10 +48,16 @@ map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 let python_highlight_all=1
 
-"run visually selected code in python
-nnoremap <leader>[ :w !python<cr>
-xnoremap <leader>] :w !python<cr>
 
+"""""""
+"run visually selected code in python
+"
+"nnoremap <leader>[ :w !python<cr>
+"xnoremap <leader>] :w !python<cr>
+
+vmap <silent> <leader>] :call RunTmuxPythonChunk()<cr>
+noremap <silent> <leader>[ :call RunTmuxPythonCell(0)<cr>
+noremap <silent> <leader>p :call RunTmuxPythonCell(1)<cr>
 set clipboard=unnamed
 
 
