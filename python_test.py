@@ -33,7 +33,7 @@ print "\n %%%%%%%%%%%%%%%%%%%%  \n"
 
 
 
-############################################3
+################################3
 ## Trying out the aoutcomplete
 
 
@@ -43,20 +43,20 @@ print "\n %%%%%%%%%%%%%%%%%%%%  \n"
 # ### Start H2O
 # Start up a 1-node H2O cloud on your local machine, and allow it to use all CPU cores and up to 2GB of memory:
 
-# In[2]:
+## In[2]:
 
-#h2o.init(max_mem_size = 2)            #uses all cores by default
+##h2o.init(max_mem_size = 2)            #uses all cores by default
 
 import h2o
 h2o.h2o.init(ip='localhost', port=54321, strict_version_check=False)
 h2o.remove_all()                          #clean slate, in case cluster was already running
 
 
-# To learn more about the h2o package itself, we can use Python's builtin help() function.
+## To learn more about the h2o package itself, we can use Python's builtin help() function.
 
-# In[3]:
+## In[3]:
 
-help(h2o)
+#help(h2o)
 
 
 # help() can be used on H2O functions and models. Jupyter's builtin shift-tab functionality also works

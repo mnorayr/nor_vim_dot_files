@@ -56,34 +56,18 @@ let python_highlight_all=1
 
 """""""
 "run visually selected code in python
-<<<<<<< HEAD
-"nnoremap <leader>[ :w !python<cr>
-"xnoremap <leader>] :w !python<cr>
-
-
 " vim-cellmode sending commands to ipython from vim
 " Setting the number of the pane to send commands to
 let g:cellmode_tmux_panenumber='1'
 "sends the currently selected lines to tmux
 "vmap <silent> <leader>] :call RunTmuxPythonChunk()<CR
 xnoremap <silent> <leader>] :call RunTmuxPythonChunk()<CR>
-
 "sends the current cell to tmux, moving to the next one
 noremap <silent> <leader>[ :call RunTmuxPythonCell(0)<CR>
-
 "sends the current cell to tmux
 noremap <silent> <leader>p :call RunTmuxPythonCell(1)<CR>
+"""""""""""""
 
-
-=======
-"
-"nnoremap <leader>[ :w !python<cr>
-"xnoremap <leader>] :w !python<cr>
->>>>>>> 14bc978bc14c0951833fb10feb50abf25fb3fb7d
-
-vmap <silent> <leader>] :call RunTmuxPythonChunk()<cr>
-noremap <silent> <leader>[ :call RunTmuxPythonCell(0)<cr>
-noremap <silent> <leader>p :call RunTmuxPythonCell(1)<cr>
 set clipboard=unnamed
 
 
@@ -129,8 +113,8 @@ Plugin 'julienr/vim-cellmode'
 
 " Markdown / Writting
 Plugin 'tmhedberg/SimpylFold'
-Bundle 'Valloric/YouCompleteMe'
-Plugin 'vim-syntastic/syntastic'
+" Bundle 'Valloric/YouCompleteMe'
+" Plugin 'vim-syntastic/syntastic'
 
 
 " Git Support
