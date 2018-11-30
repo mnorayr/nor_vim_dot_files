@@ -10,6 +10,13 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+map <C-a> <esc>ggVG
+
+"""""""""""""""""""""""
+" Python comment out with Shift-V
+vnoremap <silent> # :s/^/#/<cr>:noh<cr>
+vnoremap <silent> -# :s/^#//<cr>:noh<cr>
+
 
 " Autosave
 let g:auto_save = 1  " enable AutoSave on Vim startup
@@ -53,10 +60,7 @@ map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 let python_highlight_all=1
 
-
-"""""""
 "run visually selected code in python
-<<<<<<< HEAD
 "nnoremap <leader>[ :w !python<cr>
 "xnoremap <leader>] :w !python<cr>
 
@@ -75,15 +79,7 @@ noremap <silent> <leader>[ :call RunTmuxPythonCell(0)<CR>
 noremap <silent> <leader>p :call RunTmuxPythonCell(1)<CR>
 
 
-=======
-"
-"nnoremap <leader>[ :w !python<cr>
-"xnoremap <leader>] :w !python<cr>
->>>>>>> 14bc978bc14c0951833fb10feb50abf25fb3fb7d
 
-vmap <silent> <leader>] :call RunTmuxPythonChunk()<cr>
-noremap <silent> <leader>[ :call RunTmuxPythonCell(0)<cr>
-noremap <silent> <leader>p :call RunTmuxPythonCell(1)<cr>
 set clipboard=unnamed
 
 
@@ -130,7 +126,7 @@ Plugin 'julienr/vim-cellmode'
 " Markdown / Writting
 Plugin 'tmhedberg/SimpylFold'
 Bundle 'Valloric/YouCompleteMe'
-Plugin 'vim-syntastic/syntastic'
+" Plugin 'vim-syntastic/syntastic'
 
 
 " Git Support
