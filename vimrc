@@ -175,7 +175,7 @@ if has('gui_running')
   set background=dark
   colorscheme solarized
 else
-  colorscheme darcula "zenburn
+  colorscheme zenburn "darcula "
 endif
 
 
